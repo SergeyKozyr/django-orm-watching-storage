@@ -3,7 +3,7 @@ from django.shortcuts import render
 
 
 def storage_information_view(request):
-    visits = Visit.objects.filter(left_at=None)
+    visits = Visit.objects.filter(leaved_at=None)
     non_closed_visits = []
 
     for visit in visits:
@@ -12,6 +12,7 @@ def storage_information_view(request):
                 "who_entered": visit.passcard.owner_name,
                 "entered_at": visit.entered_at,
                 "duration": visit.format_duration(visit.get_duration()),
+                "is_strange": visit.is_long(),
             }
         )
 
