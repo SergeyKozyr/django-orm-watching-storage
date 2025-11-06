@@ -23,7 +23,7 @@ SECRET_KEY=<секретный ключ для django>
 ```
 - Запустить сайт
 ```shell
-python main.py
+python manage.py runserver
 ```
 - Перейти на http://0.0.0.0:8000/
 
