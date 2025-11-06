@@ -9,4 +9,4 @@ def active_passcards_view(request):
         "active_passcards": active_passcards,
     }
 
-    return render(request, 'active_passcards.html', context)
+    return render(request, "active_passcards.html", context)
